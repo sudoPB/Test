@@ -3,10 +3,14 @@ import java.util.*;
 
 class Main{
     
-    class candidate 
+    static class candidate 
     {
         String name;
         int votes;
+        candidate(String n, int v){
+            name = n;
+            votes = v;
+        }
     }
     
     static int MAX = 9;
@@ -41,8 +45,7 @@ class Main{
         }
         for (int i = 0; i < candidate_count; i++)
         {
-            candidates[i].name = st.nextToken();
-            candidates[i].votes = 0;
+            candidates[i] = new candidate(st.nextToken(), 0);
         }
         
         System.out.print("Number of voters: ");
@@ -74,5 +77,6 @@ class Main{
     static void print_winner()
     {
         //TODO
+        return;
     }
 }
